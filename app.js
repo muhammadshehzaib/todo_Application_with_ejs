@@ -28,6 +28,3 @@ app.post("/", (req, res) => {
 app.listen(4000, () => {
   console.log(`Port is running at 4000`);
 });
-
-app.use("/.netlify/function/app", router);
-module.exports.handler = serverless(app);
