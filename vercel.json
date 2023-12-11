@@ -1,11 +1,15 @@
 {
-    "version":2,
-    "name": "Todo_application_ejs_deployment",
-    "builds":[{"src":"./app.js","use":"@vercel/node"}],
-    "routes":[{"src":"/(.*)","dest":"/"}],
-    "rewrites": [{ "source": "/app/(.*)", "destination": "/app" }]
-
-}
-
-
-  
+    "version": 2,
+    "builds": [
+      {
+        "src": "app.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "index.js"
+      }
+    ]
+  }

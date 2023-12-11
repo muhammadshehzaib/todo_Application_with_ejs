@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
   res.render("list", { KindofDay: day, newListItems: newItems });
 });
 
-app.post("/", (req, res) => {
+app.post("/post", (req, res) => {
   let newItem = req.body.newItem;
   newItems.push(newItem);
   res.redirect("/");
